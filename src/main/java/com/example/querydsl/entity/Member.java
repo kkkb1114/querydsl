@@ -1,7 +1,7 @@
-package com.example.querydsl;
+package com.example.querydsl.entity;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,5 +18,9 @@ public class Member {
 
     protected Member(){
 
+    }
+
+    public Member(String name){
+        this.name = name;
     }
 }
