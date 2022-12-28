@@ -6,13 +6,15 @@ spring:
     driver-class-name: org.h2.Driver
 
   # 이 옵션은 애플리케이션 실행 시점에 자동으로 테이블을 drop하고, 다시 생성해준다는 말이다.
+  # use_sql_comments: Querydsl의 Q Entity 사용시 Query문을 보기 위한 옵션
   jpa:
     hibernate:
       ddl-auto: create
     properties:
       hibernate:
-        format_sql: true
         #show_sql: true
+        format_sql: true
+        use_sql_comments: true
         #default_batch_fetch_size: 100
         #open-in-view: false
 
